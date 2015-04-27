@@ -3,7 +3,7 @@ Simple Spark Project Example - Not the recommended approach!
 
 Example of a Simple Spark project that bundles into a single jar and runs the specified main. This is not the recommended approach to running a spark project. 
 
-Look at using Spark Submit (spark submit --class) or the [Spark Job Server Instead](https://github.com/spark-jobserver/spark-jobserver)
+Look at using Spark Submit (spark submit --class) or the [Spark Job Server](https://github.com/spark-jobserver/spark-jobserver) instead.
 
 How to Run
 ==========
