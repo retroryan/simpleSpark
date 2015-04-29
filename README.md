@@ -9,6 +9,7 @@ How to Run
 ==========
 
 * checkout source
+* Change the IP to point to your client application IP (where this program runs) and server IP address in DemoApp.scala
 * brew install sbt
 * In the command prompt: 
 * sbt assembly
