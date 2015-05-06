@@ -1,4 +1,4 @@
-package com.datastax.spark.connector.demo
+package com.datastax.sparkDemo
 
 import com.datastax.bdp.spark.DseSparkConfHelper
 import org.apache.spark.{Logging, SparkContext, SparkConf}

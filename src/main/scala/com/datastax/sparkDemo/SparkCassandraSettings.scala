@@ -1,4 +1,4 @@
-package com.datastax.spark.connector.demo
+package com.datastax.sparkDemo
 
 import com.typesafe.config.{Config, ConfigFactory}
 

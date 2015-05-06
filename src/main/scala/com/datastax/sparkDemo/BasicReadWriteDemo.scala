@@ -1,4 +1,4 @@
-package com.datastax.spark.connector.demo
+package com.datastax.sparkDemo
 
 import com.datastax.spark.connector.cql.CassandraConnector
 import org.apache.spark.SparkContext
