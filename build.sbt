@@ -20,7 +20,10 @@ libraryDependencies ++= Seq(
   ("com.datastax.spark" %% "spark-cassandra-connector-java" % SparkCassandra withSources() withJavadoc()).
     exclude("org.apache.spark","spark-core"),
   "net.jpountz.lz4" % "lz4" % "1.2.0",
-  "com.typesafe.play" %% "play-json" % "2.2.1")
+  ("org.apache.kafka" % "kafka_2.10" % "0.8.0").
+    exclude("org.slf4j","slf4j-simple"),
+  "org.apache.spark" %% "spark-streaming-kafka" % "1.1.0"
+)
 
 //We do this so that Spark Dependencies will not be bundled with our fat jar but will still be included on the classpath
 //When we do a sbt/run
@@ -41,4 +44,4 @@ mergeStrategy in assembly := {
     oldStrategy(x)
 }
 
-mainClass in assembly := Some("com.datastax.spark.connector.demo.BasicReadWriteDemo")
+mainClass in assembly := Some("com.datastax.sparkDemo.BasicReadWriteDemo")

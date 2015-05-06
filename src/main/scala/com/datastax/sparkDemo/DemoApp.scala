@@ -1,16 +1,15 @@
 package com.datastax.sparkDemo
 
-import com.datastax.bdp.spark.DseSparkConfHelper
 import org.apache.spark.{Logging, SparkContext, SparkConf}
 
 trait DemoApp extends Logging {
 
   val words = "/tmp/words"
 
-  val DSE_HOST = "10.0.0.14"
+  val DSE_HOST = "192.168.101.19"
 
   //Driver Host is the ip of the application running the spark application
-  val DRIVER_HOST = "10.0.0.26"
+  val DRIVER_HOST = "192.168.101.19"
 
   def getSparkConf() = {
 
