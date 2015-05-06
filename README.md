@@ -69,9 +69,9 @@ dse/bin/dse cassandra -k
 To build and run the Kafka example
 ========================================
 
-Build the jar file -> 'sbt assembly'
-Make sure you've got a running spark server and Cassandra node listening on localhost
-Make sure you've got a running Kafka server on localhost with the topic events pre-provisioned.
-Start the Kafka producer sbt "runMain com.datastax.streamingDemos.KafkaProducer"
-Submit the assembly to the spark server ~/dse/bin/dse spark-submit --class com.datastax.streamingDemos.KafkaConsumer ./target/scala-2.10/simpleSpark-assembly-0.2.0.jar
-Data will be posted to the C* column families demo.event_log and demo.event_counters
+* Build the jar file -> 'sbt assembly'
+* Make sure you've got a running spark server and Cassandra node listening on localhost
+* Make sure you've got a running Kafka server on localhost with the topic events pre-provisioned.
+* Start the Kafka producer sbt "runMain com.datastax.streamingDemos.KafkaProducer"
+* Submit the assembly to the spark server ~/dse/bin/dse spark-submit --class com.datastax.streamingDemos.KafkaConsumer ./target/scala-2.10/simpleSpark-assembly-0.2.0.jar
+* Data will be posted to the C* column families demo.event_log and demo.event_counters
