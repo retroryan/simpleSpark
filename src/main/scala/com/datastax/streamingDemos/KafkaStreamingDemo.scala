@@ -28,7 +28,7 @@ import com.datastax.driver.core.ConsistencyLevel
 import com.datastax.driver.core.utils.UUIDs
 
 object Config {
-  val sparkMasterHost = "127.0.0.1"
+  val sparkMasterHost = "192.168.101.19"
   val cassandraHost = "192.168.101.19"
   val cassandraKeyspace = "demo"
   val cassandraCfCounters = "event_counters"
@@ -51,7 +51,7 @@ object StreamConsumer {
     val sparkConf = new SparkConf(true)
       .set("spark.cassandra.connection.host", Config.cassandraHost)
       .set("spark.cleaner.ttl", "3600")
-      .setMaster("local[12]")
+      .setMaster(s"spark://${Config.sparkMasterHost}:7077")
       .setAppName(getClass.getSimpleName)
 
     // Connect to the Spark cluster:
