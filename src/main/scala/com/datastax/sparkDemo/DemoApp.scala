@@ -19,8 +19,6 @@ trait DemoApp extends Logging {
         .setAppName("techsupply")
         .set("spark.cassandra.connection.host",DSE_HOST)
         .set("spark.driver.host", DRIVER_HOST)
-        .set("spark.eventLog.enabled", "true")
-        .set("spark.eventLog.dir", "/Users/ryanknight/dse/logs/spark/eventLog")
         .setMaster(s"spark://${DSE_HOST}:7077")
         .setJars(Array("target/scala-2.10/simpleSpark-assembly-0.2.0.jar"))
 
