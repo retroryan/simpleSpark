@@ -1,6 +1,6 @@
 import AssemblyKeys._
 
-name := "simpleSpark"
+name := "SensorAnalyzer"
 
 version := "0.2.0"
 
@@ -8,6 +8,8 @@ scalaVersion := "2.10.4"
 
 val Spark = "1.1.0"
 val SparkCassandra = "1.1.0"
+
+val Json4s         = "3.2.10"
 
 resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
 
@@ -22,7 +24,10 @@ libraryDependencies ++= Seq(
   "net.jpountz.lz4" % "lz4" % "1.2.0",
   ("org.apache.kafka" % "kafka_2.10" % "0.8.0").
     exclude("org.slf4j","slf4j-simple"),
-  "org.apache.spark" %% "spark-streaming-kafka" % "1.1.0"
+  "org.apache.spark" %% "spark-streaming-kafka" % "1.1.0",
+  "org.json4s"          %% "json4s-core" % Json4s,
+  "org.json4s"          %% "json4s-jackson" % Json4s,
+  "org.json4s"          %% "json4s-native" % Json4s
 )
 
 //We do this so that Spark Dependencies will not be bundled with our fat jar but will still be included on the classpath

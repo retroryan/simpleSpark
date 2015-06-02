@@ -75,3 +75,5 @@ To build and run the Kafka example
 * Start the Kafka producer sbt "runMain com.datastax.streamingDemos.KafkaProducer"
 * Submit the assembly to the spark server ~/dse/bin/dse spark-submit --class com.datastax.streamingDemos.KafkaConsumer ./target/scala-2.10/simpleSpark-assembly-0.2.0.jar
 * Data will be posted to the C* column families demo.event_log and demo.event_counters
+
+~/dse/bin/dse spark-submit --class com.datastax.sparkDemo.ClusterCopy ./target/scala-2.10/simpleSpark-assembly-0.2.0.jar
